@@ -274,7 +274,7 @@ def show_stats(body, client):
             except (ValueError, TypeError):
                 pass
     rating_str = "  |  ".join(
-        f"{m}: {sum(v)/len(v):.1f}⭐" if rating_totals[m] else f"{m}: —"
+        f"{m}: {sum(rating_totals[m])/len(rating_totals[m]):.1f}⭐" if rating_totals[m] else f"{m}: —"
         for m in MEMBERS
     )
 
